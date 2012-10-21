@@ -18,7 +18,7 @@ class AliensControllerTest < ActionController::TestCase
 
   test "should create alien" do
     assert_difference('Alien.count') do
-      post :create, alien: { : @alien., name: @alien.name }
+      post :create, alien: { name: @alien.name }
     end
 
     assert_redirected_to alien_path(assigns(:alien))
@@ -35,7 +35,7 @@ class AliensControllerTest < ActionController::TestCase
   end
 
   test "should update alien" do
-    put :update, id: @alien, alien: { : @alien., name: @alien.name }
+    put :update, id: @alien, alien: { name: @alien.name }
     assert_redirected_to alien_path(assigns(:alien))
   end
 

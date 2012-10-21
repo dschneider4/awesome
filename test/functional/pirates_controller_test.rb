@@ -18,7 +18,7 @@ class PiratesControllerTest < ActionController::TestCase
 
   test "should create pirate" do
     assert_difference('Pirate.count') do
-      post :create, pirate: { : @pirate., name: @pirate.name }
+      post :create, pirate: { name: @pirate.name }
     end
 
     assert_redirected_to pirate_path(assigns(:pirate))
@@ -35,7 +35,7 @@ class PiratesControllerTest < ActionController::TestCase
   end
 
   test "should update pirate" do
-    put :update, id: @pirate, pirate: { : @pirate., name: @pirate.name }
+    put :update, id: @pirate, pirate: { name: @pirate.name }
     assert_redirected_to pirate_path(assigns(:pirate))
   end
 
